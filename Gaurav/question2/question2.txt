@@ -1,0 +1,16 @@
+Q2. How to set multiple remote repositories for the same project? Explain the use case. you should have a working demo of it.
+
+-> following is the step by step process to add multiple remote repos:
+
+1.Initialize the local git repo using "git init".
+
+2. by convention the primary remote repo is called origin. you can add multiple url with different names.
+
+    - git remote add origin "YOUR URL of remote repo 1"
+    - git remote add name1 "YOUR URL of remote repo 2"
+    - git remote add name2 "YOUR URL of remote repo 3"
+
+3. you can view all the remote repo with "git remote -v"
+
+
+ 

@@ -1,0 +1,5 @@
+Q5. Difference between --force push and --force-with-lease
+
+-> git push --force overwrites a remote branch with your local branch.
+
+->whereas, git push --force-with-lease will not overwrite any work on the remote branch if more commits were added to the remote branch. first it takes the remote branch as lease and pushes the changes. if the leased branch is same as the remote branch it get pushed.
