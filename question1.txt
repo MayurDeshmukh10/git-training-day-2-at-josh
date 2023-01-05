@@ -1,0 +1,9 @@
+Cherry pick command is in use when developer commit the change in incorrect branch. the by using cherry pick command he can fix it and copy that  commit in correct branch.
+
+Without merging whole branch or repository it only select the commit that we need.
+
+Steps - 
+1. Suppose we have to make change in master branch then switch to it.
+   git checkout master
+2. Copy sha id from previous branch by using git log
+3. git cherry-pick<shaid>

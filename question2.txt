@@ -1,0 +1,6 @@
+Use cases : To avoid conflict between stages we can set multiple remote repository for project.
+
+Steps : 
+1. git remote add <repo name> <github repo url>
+2. git push upstream [branch name]
+
