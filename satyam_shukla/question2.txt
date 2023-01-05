@@ -1,0 +1,20 @@
+ans.)To set multiple remote repositories for the same project in Git, you can use the "git remote" command with the "add" subcommand. Here's an example of how you can do this:
+
+Check the current remote repository for your project:
+
+
+Check the current remote repository for your project:
+Copy code
+git remote -v
+Add a new remote repository:
+Copy code
+git remote add <remote-name> <remote-url>
+Replace "<remote-name>" with a name for the remote repository (e.g., "upstream", "backup", etc.) and "<remote-url>" with the URL of the remote repository. For example:
+
+Copy code
+git remote add upstream https://github.com/upstream-user/repo.git
+This will add a new remote repository called "upstream" with the URL "https://github.com/upstream-user/repo.git".
+
+Verify that the new remote repository has been added:
+Copy code
+git remote -v
