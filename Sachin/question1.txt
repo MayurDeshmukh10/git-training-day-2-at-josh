@@ -1,0 +1,12 @@
+cherry-pick applies the changes introduced by perticular commits,rather then applying all commit's along a branch. 
+
+Use Cases :-
+When we want to undo the changes introduced by some commit
+Combining multiple commit's into single commit 
+Applying specific changes from one branch to another(when a backend developer is working on a data structure and bakend developer wants to access he can get he perticuler commit)
+
+Steps :
+
+git checkout main		#swithching to main branch
+
+git cherry-pick <id> 	#the commit with id will be picked to main branch
