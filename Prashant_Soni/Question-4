@@ -1,0 +1,11 @@
+ 
+For deleting one commit prior to head :-
+git reset --hard HEAD~1
+
+Note that HEAD~1 means one commit prior to the HEAD
+ 
+ 
+For deleting multiple commits:-
+git rebase -i <sha1-commit-hash>//Deleting the "Middle" Commit from the History
+ 
+To delete it from the history, then run git rebase in interactive mode:

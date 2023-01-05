@@ -1,0 +1,5 @@
+The git restore command is used to unstage a file to the Staging Area.
+
+$ git restore --staged myFile.js
+
+This will remove the file from the Staging Area, making sure that it will NOT be part of the next commit

@@ -1,0 +1,8 @@
+ 
+Steps to combine two commits into one commit are :-
+
+
+1) Running git rebase in interactive mode
+2) Typing "squash" on the commit that we want to combine in it.
+3) Choosing between commit messages
+4) Pushing changes
