@@ -1,0 +1,14 @@
+To combine two commits into one we can use interactive rebase.
+Steps:-
+
+1.Run git rebase in interactive mode 
+	git rebase -i HEAD~2
+HEAD~2 means 2 commits previous of HEAD
+We can use particular commits using its commit ID
+
+2.Now type Squash
+	pick C1
+	pick C2
+	squash C3
+	pick C4
+
