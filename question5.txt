@@ -1,0 +1,14 @@
+--force:-
+	This command overwrites a remote branch with the local branch
+
+--force-with-lease:-
+	This is safer than --force as it will not overwrite any work on 
+	the remote branch if more commits were added to the remote branch.
+
+Using this flag, git checks if the remote version of the branch is the same
+as the one you rebase, i.e. did someone push new commits when we were
+rebasing. The push is then rejected if the remotes branch is changed.And 
+then when pushing, it checks the version you started from and applies 
+the changes only if the version it remembers matches the one currently on
+the remote. So, you won’t accidentally overwrite a commit you’re not aware
+of.

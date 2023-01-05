@@ -1,0 +1,9 @@
+To delete a single commit:-
+
+git reset --hard HEAD~1
+
+To delete upto a certain commit:-
+
+git reset --hard <commit ID>
+
+commit ID will be of that commit upto which you want to delete.

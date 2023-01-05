@@ -1,0 +1,18 @@
+Cherry pick is a powerful command that enables random Git commits to be picked by reference
+and added to the current branch. We can also say that cherry picking is a process of picking
+a commit from a branch and applying it to another.
+
+There are many uses of cherry pick:-
+
+1.In team collaboration
+2.In case of bug fixing
+3.To access the change in another branch without changing the current branch
+
+Steps to do it:-
+
+1.Go to the branch from where you want to get the commit from
+2.There run the command git log to get the history of the commits
+3.Now get the commit ID of the commit you want to cherry pick
+4.Now go to the branch where you want to get the commit
+5.Now run the command git cherry-pick <commit Id>. The commit will be added to the current
+  branch  

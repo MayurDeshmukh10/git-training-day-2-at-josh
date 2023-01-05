@@ -1,0 +1,9 @@
+To unstage changes from the staged area the following command is used:-
+
+git reset <file_name>
+
+for example,
+	git reset animesh.py
+
+
+this makes sure that this file is not included in our next commit.
