@@ -1,0 +1,24 @@
+What is cherry pick  ? 
+ans:- git cherry-pick is a powerful command that enables arbitrary Git commits to be picked by reference and appended to the current working HEAD.
+USE CASES :
+1) to import commits from diffrent branch to your current branch 
+2) to carry on work from previos commits
+
+STEPS :
+Think of each git commit or letter (as illustrated above) as a cherry. Each cherry has a unique hash associated with it – if you’re not sure what a hash is, think of it as a fingerprint or unique identifier that’s associated with the commit. We’ll need that hash in order to pick that cherry and add it to another branch.
+1) git checkout <name of branch you’d like to grab commit from>
+Checkout to the branch you would like to pick your commit/cherry from.
+2) git reflog
+The git reference log, reflog , keeps track of recent actions made. Here is an example of a git reflog:
+git log
+bf654bb (HEAD -> master, origin/master) HEAD@{0}: commit: last commit message made
+2394353 HEAD@{1}: commit: where head was 2 commit messages ago
+b4b51eb HEAD@{2}: commit: where head was 3 commit messages ago
+
+Your commit reference log, if working with a large team, may have more information, such as the date, time, and/or author who made the commit. Here, though, we see the commit hash, the branch where the commit was made, the action made, and the actual commit message.
+
+Once you know which commit you would like to add to the other branch, take note of the hash – the hash is the string of numbers and characters at the beginning of each line in this example.
+3) git checkout <name of branch you would like to add commit to>
+After you have made note of the hash, switch to the branch you would like to add the commit to.
+4) git cherry-pick [-x] <commit hash>
+Use the git cherry-pick command with the commit hash to add the commit to that branch’s working tree. Use the -x flag when you are cherry-picking from a public branch as this will append a line that remarks the original commit it was cherry-picked from.

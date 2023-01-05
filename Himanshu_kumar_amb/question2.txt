@@ -1,0 +1,16 @@
+Ans :
+steps to add multiple remote origin :
+1) Define a git remote which will point to multiple git remotes.
+Say, we call it “all”: git remote add all REMOTE-URL-1.
+2) Register 1st push URL: git remote set-url --add --push all REMOTE-URL-1.
+3) Register 2nd push URL: git remote set-url --add --push all REMOTE-URL-2.
+4) Push a branch to all the remotes with git push all BRANCH – replace BRANCH with a real branch name.
+
+
+USE CASE 
+1)it is easy to synchronize code between multiple git repositories, 
+especially, pushing to multiple remotes. This is helpful when you’re maintaining mirrors 
+ copies of the same repository. All you need to do is set up multiple push URLs on a remote 
+and then perform git push to that remote as you usually do.
+2) To have different versions for staging , testing , deployment processes 
+

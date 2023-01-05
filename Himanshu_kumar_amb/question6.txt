@@ -1,0 +1,6 @@
+ans => 
+We use "git reset" command to un stage changes from the staged area all the changes 
+git reset location/of/file.ext  ,  for specific file 
+
+git reset directory/location   , for specific location 
+
