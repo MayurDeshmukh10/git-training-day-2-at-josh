@@ -1,0 +1,93 @@
+5. Difference between --force push and --force-with-lease, You have to show the use of both, also you have to show in what scenario --force-with-lease is used?
+
+Answer:
+
+git push --force is a command that forcibly updates the remote repository with the local commits, even if it means discarding commits that have been made on the remote repository. This can be dangerous because it can overwrite commits that have been pushed by other people, potentially leading to data loss.
+
+
+git push --force-with-lease is a variant of git push --force that is designed to be safer. It works by checking that the remote repository has not been updated since you last fetched from it. If the remote repository has been updated in the meantime, git push --force-with-lease will refuse to push your changes, to prevent you from overwriting commits that you don't have locally.
+
+Use for git push --force :
+
+1. You clone a repository and make some changes locally.
+2. You push your changes to the remote repository using git push.
+3. Someone else pushes new commits to the same branch on the remote repository.
+4. You make more changes locally and try to push them using git push --force. This will succeed and      overwrite the new commits that have been pushed by the other person.
+
+Use of git push --force-with-lease:
+
+Once you clone the repo and make some changes locally and simultaneosly someone else also updated changes and pushed them remotely now if you try to push your update file to the remote repository
+using git push --force-with-lease it will warn you that your local repo is not up-to date with the remote repository, you can then sync your repo and again push the changesto the remote repository.
+
+DEMO:
+
+Using --force:
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Documents/Prasad_Bhosale_git_assignment_day2 (main)
+$ git push origin main --force
+Enumerating objects: 36, done.
+Counting objects: 100% (36/36), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (35/35), done.
+Writing objects: 100% (36/36), 7.29 KiB | 1.04 MiB/s, done.
+Total 36 (delta 14), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (14/14), done.
+To https://github.com/Coderx44/GIT_ASSIGNMENT_2.git
+ + e28e0f3...e967797 main -> main (forced update)
+
+Using --force-with-lease:
+
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Documents/Prasad_Bhosale_git_assignment_day2 (main)
+$ git push origin main --force-with-lease
+To https://github.com/Coderx44/GIT_ASSIGNMENT_2.git
+ ! [rejected]        main -> main (stale info)
+error: failed to push some refs to 'https://github.com/Coderx44/GIT_ASSIGNMENT_2.git'
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Documents/Prasad_Bhosale_git_assignment_day2 (main)
+$ git pull origin main
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 660 bytes | 132.00 KiB/s, done.
+From https://github.com/Coderx44/GIT_ASSIGNMENT_2
+ * branch            main       -> FETCH_HEAD
+   13b72a9..7a78215  main       -> origin/main
+Merge made by the 'recursive' strategy.
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Documents/Prasad_Bhosale_git_assignment_day2 (main)
+$ git status
+On branch main
+nothing to commit, working tree clean
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Documents/Prasad_Bhosale_git_assignment_day2 (main)
+$ git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   question5.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Documents/Prasad_Bhosale_git_assignment_day2 (main)
+$ git add .
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Documents/Prasad_Bhosale_git_assignment_day2 (main)
+$ git commit -m "Alter question5.txt"
+[main b9e8d15] Alter question5.txt
+ 1 file changed, 1 deletion(-)
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Documents/Prasad_Bhosale_git_assignment_day2 (main)
+$ git push origin main --force-with-lease
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 529 bytes | 529.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/Coderx44/GIT_ASSIGNMENT_2.git
+   7a78215..b9e8d15  main -> main
+

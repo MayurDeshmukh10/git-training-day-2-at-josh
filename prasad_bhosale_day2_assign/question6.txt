@@ -1,0 +1,33 @@
+6. How to un stage changes from the staged area. write command for it.
+Answer:
+To unstage changes from the staged area, you can use the git reset command.
+
+Command:
+
+git restore --staged <file>
+
+DEMO:
+
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Documents/Prasad_Bhosale_git_assignment_day2 (main)
+$ git add question6.txt
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Documents/Prasad_Bhosale_git_assignment_day2 (main)
+$ git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   question6.txt
+
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Documents/Prasad_Bhosale_git_assignment_day2 (main)
+$ git restore --staged question6.txt
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Documents/Prasad_Bhosale_git_assignment_day2 (main)
+$ git status
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        question6.txt
+
+nothing added to commit but untracked files present (use "git add" to track)

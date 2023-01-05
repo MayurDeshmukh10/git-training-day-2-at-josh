@@ -1,0 +1,56 @@
+4. How to delete one commit or multiple commits permanently Write command for it.
+Answer:
+
+
+We can use hard reset to delete one or multiple commit.
+ Command :
+//to delete previous two commits
+git reset --hard HEAD~2
+
+
+Demo:
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Documents/Prasad_Bhosale_git_assignment_day2 (main)
+$ git reset --hard HEAD~2
+HEAD is now at 618fc15 update question3.txt and add question4.txt
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Documents/Prasad_Bhosale_git_assignment_day2 (main)
+$ git log
+commit 618fc15c8ec6f08fb5f8f9f2d1e16514d61b337e (HEAD -> main)
+Author: Prasad <bhosaleprasad849@gmail.com>
+Date:   Thu Jan 5 16:02:32 2023 +0530
+
+    update question3.txt and add question4.txt
+
+commit 46746eafc8c23222f3d54943a9d2fe8644a7404e
+Author: Prasad <bhosaleprasad849@gmail.com>
+Date:   Thu Jan 5 15:16:34 2023 +0530
+
+    Update question1.txt
+
+    Update question2.txt
+
+    Add question3.txt
+
+commit dc8976c7dd768e593be55c2516b2366b315b2e7d
+Author: Prasad <bhosaleprasad849@gmail.com>
+Date:   Thu Jan 5 15:09:51 2023 +0530
+
+    D
+
+commit 84eb566b72f73376e3c934684318950f9bacf73f
+Author: Prasad <bhosaleprasad849@gmail.com>
+Date:   Thu Jan 5 15:06:33 2023 +0530
+
+    C
+
+commit 51e3a250974850d2a2acb39d66c323a1b87a5a94
+Author: Prasad <bhosaleprasad849@gmail.com>
+Date:   Thu Jan 5 14:01:54 2023 +0530
+
+    B
+
+commit 9ef64e6c73e9d51cd2701e69615bc823cddc12ab
+Author: Prasad <bhosaleprasad849@gmail.com>
+Date:   Thu Jan 5 13:59:00 2023 +0530
+
+    A
