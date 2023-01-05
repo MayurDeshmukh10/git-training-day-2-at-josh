@@ -1,0 +1,3 @@
+usecase : 
+The application can go through various stages, we can have each stage a repo to avoid confilcts between stages.
+we can set multiple providers such as aws, GCS for different repos

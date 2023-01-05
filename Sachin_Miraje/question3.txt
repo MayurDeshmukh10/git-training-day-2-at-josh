@@ -1,0 +1,16 @@
+To combine two commits into a single commit , 'git rebase' and 'squash' command can be used 
+
+e.g.
+considiring following commit's
+c1 => c2 => c3 => c4
+
+git rebase -i HEAD-4 #list last 4 commits
+
+#text editor will open 
+# pick id1 Commit C2 
+# pick id2 Commit C3 
+# pick id3 Commit C4
+
+to combine C2 and C3
+change command from "pick" to "squash"
+#squash id2 Commit c3

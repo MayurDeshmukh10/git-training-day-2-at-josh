@@ -1,0 +1,14 @@
+force push is a used to push local commits to a remote repository , overiting any commits that may have been made in the meantime.here commits made by other collaborators will be discarded and replaced with our changes.
+
+command =>
+git push origin <branch-name> --force
+
+force push with lease adds a layer for protection witch will prevent other collaborators from  overiting our commits.
+
+command =>
+git push origin <branch_name> --force-with-lease
+
+when we have to resolve conflicts before pushing the changes.
+when we have made local commits thatwe want to push to remote,but we aware that remote branch has been updated sience last fetch.
+if we use force pushwith lease our chenges will be merged cleanly.
+

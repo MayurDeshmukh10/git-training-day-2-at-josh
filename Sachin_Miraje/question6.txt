@@ -1,0 +1,8 @@
+To unstage changes from the staging area 'git reset' command followed by file name is used
+
+e.g.
+
+consider changes have be madde to file 'hello.py' and the file is added to staging area using 'git add'
+To unstage the changes following command is used
+
+git reset hello.py

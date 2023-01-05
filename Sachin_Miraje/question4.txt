@@ -1,0 +1,26 @@
+considiring following commit's
+
+a=> b => c => d => e
+ 
+git rebase -i HEAD-5 #list last 5 commits
+
+# text editor will open =>>
+
+# pick id1 Commit a
+# pick id2 Commit b 
+# pick id3 Commit c
+# pick id4 Commit d
+# pick id5 Commit e
+
+to delete commits b,c,d
+
+change command from "pick" to "drop"
+
+
+# pick id1 Commit a
+# drop id2 Commit b 
+# drop id3 Commit c
+# drop id4 Commit d
+# pick id5 Commit e
+
+
