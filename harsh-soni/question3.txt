@@ -1,0 +1,4 @@
+1.so first have used git rebase -i HEAD~4 command so that c1 c2 c3 c4 commits are picked.
+2.we want to merge commit c2 and c3 so we squash c3 commit so that c2 and c3 get merged .
+3.after that we changed the message of new merged commit of 2 and 3 
+4 and then when we log the commits we got the new merged commit with the new message which we have given
