@@ -1,0 +1,25 @@
+Cherry-pick in git means choosing a commit from one branch and applying it to another branch.
+
+Various use cases of cherry-pick are as follows :-
+
+1) If you by mistake make a commit in an incorrect branch, then using cherry-pick you can apply the required changes.
+2) Suppose when the same data structure is to be used by both the frontend and backend of a project. Then a developer can use cherry-pick to pick the commit and use it to his part of the project.
+3) At the point when a bug is found it is critical to convey a fix to end clients as fast as could be expected.
+4) Some of the time a component branch might go old and not get converged into the main branch and the request might get closed, but since git never loses those commits, it can be cherry-picked and it would be back.
+  
+Steps to do it are :-
+ 
+Step 1:  Opening the git bash and creating a new project named sample and initializing the repo using the git init command.
+ 
+Step 2: Creating a ‘.txt’ file using vi command to the project let’s say an index file and add it to our sample project and make a commit and write a commit message before pressing the Enter.
+ 
+Step 3: Now assume we have 2 versions, so create 2 different branches by using the git branch command and move to a branch.
+ 
+Step 4: Now suppose you want to work on some new feature, so creating and adding a new feature file lets say feature.txt using vi and add command respectively as shown below. Then commit your changes with a commit message.
+ 
+Step 5: Now suppose we found a bug in our feature and we came to know that this same bug is also present in our 1 branch. 
+
+        And now we are trying to fix some bug or issue as shown below by adding a fix.txt file let’s suppose and add it to the current branch i.e. 2 and committing the required changes.
+ 
+ 
+Step 6: Now, we have fixed the bug in branch 2, but we also need to add this fix to our branch 1 also, but we don’t want to merge this branch 2 into our branch 1, because the work might still be going on the feature. 

@@ -1,0 +1,11 @@
+To set multiple remote repositories for the same projects we need to write these codes :-
+
+git remote add REMOTE-ID REMOTE-URL // Syntax to add a git remote.
+
+git remote add origin git@github.com:jigarius/toggl2redmine.git // Add remote 1 in github.
+
+Usecases of setting multiple remote repositories :-
+
+It's important to stress that the actual work on your project happens only in your local repository: all modifications have to be made & committed locally.
+Then, those changes can be uploaded to a remote repository in order to share them with your team. Remote repositories are only thought as a means for sharing and exchanging
+code between developers - not for actually working on files.

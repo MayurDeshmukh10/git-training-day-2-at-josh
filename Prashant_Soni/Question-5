@@ -1,0 +1,10 @@
+The difference between the git push --force-with-lease and git push --force is the result.
+Pushing changes with lease helps us avoid discarding changes pushed by other developers.
+ 
+For using --force push use command :- $ git push --force origin
+ 
+For using --force-with-lease us ecommand :- $ git push --force-with-lease origin
+
+ 
+--force-with-lease is used when several developers are sharing a remote repository.
+We use it when publishing our changes to avoid discarding changes pushed by other developers.
