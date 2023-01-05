@@ -1,0 +1,9 @@
+If your changes have not been pushed yet simply enter the command 
+git reset --hard HEAD~1
+
+If you'd like to delete the commits up until a specific commit, running <git log> into the command line 
+to find the specific commit id and then running
+git reset --hard <sha1-commit-id>
+
+Alternatively, if you have already pushed your changes you will need to run the following code
+git push origin HEAD --force
