@@ -1,0 +1,100 @@
+Q1. What is cherry-pick? Explain the use case of it also write steps to do it.
+
+Answer:
+In the context of version control systems, cherry-picking refers to the act of selecting specific commits from a branch and applying them to another branch. 
+This can be useful when you want to apply only a few changes from one branch to another, rather than merging the entire branch.
+
+Use case:
+One use case for cherry-picking is when you have made multiple commits on a branch that are intended for separate pull requests or releases. Rather than merging the entire branch, you can cherry-pick the individual commits that you want to apply to the target branch. This can be useful if you want to apply the changes in a specific order, or if you only want to apply some of the changes and not all of them.
+
+Steps for cherry-pick:
+
+1. Check out the branch where you want to apply the cherry-picked commit.
+2. Use the git cherry-pick command followed by the commit hash to apply the commit.
+3. If there are conflicts, resolve them and commit the changes.
+4. Repeat the process for each commit that you want to cherry-pick.
+
+Command:
+git cherry-pick `commit-hash`
+
+Below is the demo for cherry-pick:
+
+//git-bash execution
+
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Documents/Prasad_Bhosale_git_assignment_day2 (main)
+$ git log
+commit dc8976c7dd768e593be55c2516b2366b315b2e7d (HEAD -> main)
+Author: Prasad <bhosaleprasad849@gmail.com>
+Date:   Thu Jan 5 15:09:51 2023 +0530
+
+    D
+
+commit 84eb566b72f73376e3c934684318950f9bacf73f
+Author: Prasad <bhosaleprasad849@gmail.com>
+Date:   Thu Jan 5 15:06:33 2023 +0530
+
+    C
+
+commit 51e3a250974850d2a2acb39d66c323a1b87a5a94
+Author: Prasad <bhosaleprasad849@gmail.com>
+Date:   Thu Jan 5 14:01:54 2023 +0530
+
+    B
+
+commit 9ef64e6c73e9d51cd2701e69615bc823cddc12ab (testing_cherry_pick)
+Author: Prasad <bhosaleprasad849@gmail.com>
+Date:   Thu Jan 5 13:59:00 2023 +0530
+
+    A
+(END)
+commit dc8976c7dd768e593be55c2516b2366b315b2e7d (HEAD -> main)
+Author: Prasad <bhosaleprasad849@gmail.com>
+Date:   Thu Jan 5 15:09:51 2023 +0530
+
+    D
+
+commit 84eb566b72f73376e3c934684318950f9bacf73f
+Author: Prasad <bhosaleprasad849@gmail.com>
+Date:   Thu Jan 5 15:06:33 2023 +0530
+
+    C
+
+commit 51e3a250974850d2a2acb39d66c323a1b87a5a94
+Author: Prasad <bhosaleprasad849@gmail.com>
+Date:   Thu Jan 5 14:01:54 2023 +0530
+
+    B
+
+commit 9ef64e6c73e9d51cd2701e69615bc823cddc12ab (testing_cherry_pick)
+Author: Prasad <bhosaleprasad849@gmail.com>
+Date:   Thu Jan 5 13:59:00 2023 +0530
+
+    A
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Documents/Prasad_Bhosale_git_assignment_day2 (main)
+$ git checkout testing_cherry_pick
+Switched to branch 'testing_cherry_pick'
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Documents/Prasad_Bhosale_git_assignment_day2 (testing_cherry_pick)
+$ git cherry-pick ^C
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Documents/Prasad_Bhosale_git_assignment_day2 (testing_cherry_pick)
+$ git cherry-pick 84eb566b72f73376e3c934684318950f9bacf73f
+[testing_cherry_pick 2824162] C
+ Date: Thu Jan 5 15:06:33 2023 +0530
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Documents/Prasad_Bhosale_git_assignment_day2 (testing_cherry_pick)
+$ git status
+On branch testing_cherry_pick
+nothing to commit, working tree clean
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Documents/Prasad_Bhosale_git_assignment_day2 (testing_cherry_pick)
+$
+
+
+
+
+
+

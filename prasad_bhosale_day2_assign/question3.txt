@@ -1,0 +1,117 @@
+3. How to combine two commits into one commit? For Example, you have 4 different commits C1, C2, C3, and  C4 and you to combine C2 and C3 into one single commit. 
+
+Answer:
+
+To combine multiple commits into a single commit in Git, you can use the git rebase command with the -i flag. This will open an interactive rebase session, where you can specify which commits to combine.
+
+Here is the general syntax for starting an interactive rebase session:
+
+Copy code
+git rebase -i <base-commit>
+The base-commit is the commit that you want to base your new commits on. In the case of combining commits, this would typically be the commit immediately preceding the ones you want to combine.
+
+For example, to combine commits C2 and C3 into a single commit, you would specify the commit C1 as the base commit:
+
+Copy code
+git rebase -i C1
+This will open an editor window with a list of the commits that will be included in the rebase. The commits will be listed in chronological order, with the oldest commit at the bottom.
+
+To combine commits, you need to change the action for the commits that you want to combine from pick to squash. For example:
+
+Copy code
+pick C1
+squash C2
+squash C3
+pick C4
+Save and close the editor window. Git will then combine the commits C2 and C3 into a single commit and apply the changes. If there are conflicts, you will need to resolve them before continuing the rebase.
+
+Demo:
+
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Documents/Prasad_Bhosale_git_assignment_day2 (main)
+$ git log
+commit 2fa65ab8747cbdd705da06bea2414952d56790f8 (HEAD -> main)
+Author: Prasad <bhosaleprasad849@gmail.com>
+Date:   Thu Jan 5 15:30:34 2023 +0530
+
+    Add question3.txt
+
+commit 1f9d0429f8aac648791228638db6edd3d021f210
+Author: Prasad <bhosaleprasad849@gmail.com>
+Date:   Thu Jan 5 15:25:22 2023 +0530
+
+    Update question2.txt
+
+commit 46af6e48de3f539ff05b2a5371e6deca2815d24b
+Author: Prasad <bhosaleprasad849@gmail.com>
+Date:   Thu Jan 5 15:16:34 2023 +0530
+
+    Update question1.txt
+
+commit dc8976c7dd768e593be55c2516b2366b315b2e7d
+Author: Prasad <bhosaleprasad849@gmail.com>
+Date:   Thu Jan 5 15:09:51 2023 +0530
+
+    D
+
+commit 84eb566b72f73376e3c934684318950f9bacf73f
+Author: Prasad <bhosaleprasad849@gmail.com>
+Date:   Thu Jan 5 15:06:33 2023 +0530
+
+    C
+
+commit 51e3a250974850d2a2acb39d66c323a1b87a5a94
+Author: Prasad <bhosaleprasad849@gmail.com>
+Date:   Thu Jan 5 14:01:54 2023 +0530
+
+    B
+
+commit 9ef64e6c73e9d51cd2701e69615bc823cddc12ab
+Author: Prasad <bhosaleprasad849@gmail.com>
+Date:   Thu Jan 5 13:59:00 2023 +0530
+
+    A
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Documents/Prasad_Bhosale_git_assignment_day2 (main)
+[detached HEAD 46746ea] Update question1.txt
+ Date: Thu Jan 5 15:16:34 2023 +0530
+ 3 files changed, 138 insertions(+), 2 deletions(-)
+ create mode 100644 question3.txt
+Successfully rebased and updated refs/heads/main.
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Documents/Prasad_Bhosale_git_assignment_day2 (main)
+$ git log
+commit 46746eafc8c23222f3d54943a9d2fe8644a7404e (HEAD -> main)
+Author: Prasad <bhosaleprasad849@gmail.com>
+Date:   Thu Jan 5 15:16:34 2023 +0530
+
+    Update question1.txt
+
+    Update question2.txt
+
+    Add question3.txt
+
+commit dc8976c7dd768e593be55c2516b2366b315b2e7d
+Author: Prasad <bhosaleprasad849@gmail.com>
+Date:   Thu Jan 5 15:09:51 2023 +0530
+
+    D
+
+commit 84eb566b72f73376e3c934684318950f9bacf73f
+Author: Prasad <bhosaleprasad849@gmail.com>
+Date:   Thu Jan 5 15:06:33 2023 +0530
+
+    C
+
+commit 51e3a250974850d2a2acb39d66c323a1b87a5a94
+Author: Prasad <bhosaleprasad849@gmail.com>
+Date:   Thu Jan 5 14:01:54 2023 +0530
+
+    B
+
+commit 9ef64e6c73e9d51cd2701e69615bc823cddc12ab
+Author: Prasad <bhosaleprasad849@gmail.com>
+Date:   Thu Jan 5 13:59:00 2023 +0530
+
+    A
+
