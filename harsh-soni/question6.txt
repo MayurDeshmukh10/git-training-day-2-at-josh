@@ -1,1 +1,2 @@
 git reset --soft HEAD~
+git restore --stagedfilename
