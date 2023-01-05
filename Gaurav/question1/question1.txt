@@ -1,0 +1,21 @@
+Q1. What is cherry-pick? Explain the use case of it also write steps to do it.
+
+-> cherry-pick is a command used to get a commit from other branch to the current branch using commit reference .
+
+->let's understand with following example
+
+-> A-B-C-D-  Branch 1
+   |
+   E-F-G-H-  Branch 2
+
+->Let say above are the 2 branches, now the branch1 needs the commit F from the branch 2, it can be done by following command:
+
+    git cherry-pick commit-reference-f
+
+where "commit-reference-f" is the commit id of the commit F which can be found from git log.
+
+->now the structure would look like:
+
+-> A-B-C-D-F  Branch 1
+   |
+   E-F-G-H-  Branch 2
