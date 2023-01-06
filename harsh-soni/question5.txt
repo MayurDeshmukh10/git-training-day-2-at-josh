@@ -1,0 +1,10 @@
+force overwrites a remote branch with your local branch.
+--force-with-lease is a safer option that will not overwrite any work on the remote branch if more commits 
+were added to the remote branch (by another team-member or coworker or what have you). It ensures you do 
+not overwrite someone elses work by force pushing.
+
+The --force flag is responsible for overriding the protective measures of the remote repository to ensure 
+that your changes are forcefully pushed.
+Use the --force-with-lease flag instead of the --force flag. If your colleagues change the remote 
+repository after your last pull request, this flag will raise an error to prevent you from overwriting
+the new commits

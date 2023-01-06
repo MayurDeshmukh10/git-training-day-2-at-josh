@@ -1,0 +1,16 @@
+Git Cherry Pick Git cherry Pick is a usefull command.cherry pick is picking a particular commit 
+from a branch and applying it to another.for example if we want a code from a particular branch 
+and we don't want to merge the branches and dont need the other commits code so in this case we 
+can use cherry pick command which will pick the code from a particular commit.
+Git Cherry pick can be used in many scenarios like team collaboration , Bug fixes and undoing changes and restoring lost commits 
+The command for cherry pick is:- git cherrypick <commitid>;
+Cherry picking should not be misused in place of git merge or git rebase. The git log command is required to help find commits to cherry pick.
+
+
+Steps for use git cherry pick are as follows -
+1. Checkout to branch you want to pick the commit from 
+   command for that is git checkout <branch name>
+2. check the commit id which you want to pick 
+   by using the command git log and then select the commit id.
+3. then again checkout the main branch in which you want that commit the code.
+4. then type the command git cherry-pick <commit hash>.
