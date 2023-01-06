@@ -1,0 +1,4 @@
+Q5. Difference between --force push and --force-with-lease, You have to show the use of both, also you have to show in what scenario --force-with-lease is used?
+
+When we want to execute a git push command and remote repository rejects it then to execute that push command forcefully we use git push --force command.
+If the remote branch is changed by a person while we were executing push command, then with --force repository will get updated by our change and we may lose important changes made by our partner. So, to check whether someone has updated repository or not we use --force-with-lease. If someone has updated the repository and we try push --force-with-lease then push request will be rejected.
