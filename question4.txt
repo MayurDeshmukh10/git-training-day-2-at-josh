@@ -1,0 +1,6 @@
+Steps for Delete the commit :
+1. Move head to commit that we have to delete
+   git checkout <commit-id>
+2. git reset --soft HEAD~1
+
+
