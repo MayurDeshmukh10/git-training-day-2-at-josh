@@ -1,0 +1,6 @@
+-> Inorder to merge multiple commits into one,
+We need to first use the rebase command but we need to perform it as an interactive rebase. using '-i'.
+
+-> Suppose we need to merge the last C2 and C3 commits, so we will first put the HEAD on C3 and then run the command 'git rebase -i HEAD~2'. After this editor window will show up offering us to input a command for each commit. We just need to replace "pick" with "squash" and save the file.
+
+-> Now we can merge the C3 command into the C2 command.
