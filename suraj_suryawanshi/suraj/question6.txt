@@ -1,0 +1,4 @@
+1.git rm --cached filename
+2.git restore filename
+3.git reset --soft commit_id
+
