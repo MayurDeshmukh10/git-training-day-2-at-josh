@@ -1,0 +1,8 @@
+Q2. How to set multiple remote repositories for the same project? Explain the use case. you should have a working demo of it.
+
+We define "all" to point to multiple git repositories.
+git remote add all first_url.
+Register 1st URL: git remote set-url --add --push all first_url.
+Register 2nd URL: git remote set-url --add --push all second_url.
+Push a branch to both the remote repositories :- 
+git push all branch_name

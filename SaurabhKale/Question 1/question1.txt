@@ -1,0 +1,12 @@
+Q1. What is cherry-pick? Explain the use case of it also write steps to do it.
+
+--> If we are in master branch and other branch is making changes or making commits in a file which is also there in our master branch and we want only a single particular commit to be there in our file not whole changes made till now by other branch for that file then we use cherry-pick to do it.
+
+ Use case :- 
+	Consider you are working on the branch1 and I am working on master(main) branch. We both are working parellely on a website's authentication page and you are all done with your task but I am yet to do it and I only need forget password logic from your code which is a part of one of the commits done by you, to complete my task. Then to fetch that particular code(commit) from you I will use git cherry-pick command.
+
+	like :- git cherry-pick commit_id
+	example:-git cherry-pick bdce59
+
+  Steps :-
+	Make multiple commits in a branch and in master branch cherry-pick with one of those commits and you will observe changes in master branch.
