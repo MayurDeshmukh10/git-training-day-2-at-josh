@@ -1,0 +1,6 @@
+There are 2 types of push --> force and force with lease
+
+uses --> if remote is ahead of local and we have to push the code then use -f or -force
+          otherwise use --force-with-lease
+
+git reset <file name>
