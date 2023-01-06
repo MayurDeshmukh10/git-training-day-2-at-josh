@@ -1,0 +1,8 @@
+ans.)To delete a single commit permanently in Git, you can use the "git revert" command followed by the commit hash. This will create a new commit that undoes the changes made in the original commit.
+
+For example, to delete the commit with the hash "abcdef12", 
+you can use the following command:
+
+git revert abcdef12
+
+

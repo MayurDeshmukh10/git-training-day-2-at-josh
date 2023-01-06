@@ -1,0 +1,22 @@
+To combine two commits into one commit in Git, you can use the "rebase" command with the "--interactive" option. This will open an editor where you can specify which commits to combine.
+steps 
+1.Check out the branch that you want to modify-git checkout my-branch
+
+2.Start an interactive rebase, specifying the number of commits to edit
+
+ git rebase -i HEAD~2
+
+
+3.In the editor that opens, you'll see a list of the commits that you specified
+ (in this case, the two most recent commits). Change the word "pick" next to the commit that you want to keep to "squash", like this:
+pick abcdef12 My first commit
+squash def1234 My second commit
+
+4.Save and close the editor. Git will apply the changes and open another editor where you can modify the commit message for the combined commit.
+
+Update the commit message as needed, then save and close the editor. Git will finish the rebase and combine the two commits into one.
+
+It's a good idea to make a backup of your branch before performing an interactive rebase, in case something goes wrong. You can use the "git branch" command to create a new branch from your current branch, like this:
+
+git branch backup-branch
+

@@ -1,0 +1,16 @@
+ ans.1)the concept of cheery picking is very simple it simply states that choosing a commit
+ from one
+branch and applying it to another branch.
+
+
+
+ To cherry-pick a commit in Git, you can use the "cherry-pick" command followed by the commit hash. For example:
+
+
+git cherry-pick abcdef12
+This will apply the changes made in the commit with the hash "abcdef12" to the current branch. You can also cherry-pick multiple commits by specifying their hashes, separated by spaces.
+
+It's important to note that cherry-picking can create conflicts if the same lines of code were modified in both the original and target branches. In such cases, you'll need to resolve the conflicts manually before the cherry-pick can be completed.
+
+
+this commit will not be shown in because i am implemnting cheery picking

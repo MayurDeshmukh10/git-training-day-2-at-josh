@@ -1,0 +1,3 @@
+ans.) to restore from staged area we use restore.
+   
+	the syntax is: git restore --staged randomfile.txt
