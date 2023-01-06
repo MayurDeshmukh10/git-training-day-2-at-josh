@@ -1,2 +1,5 @@
 git reset --soft HEAD~
 git restore --stagedfilename
+
+
+demo this line is for move staged to unstaged already
