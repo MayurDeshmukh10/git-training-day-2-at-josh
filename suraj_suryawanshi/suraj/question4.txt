@@ -1,0 +1,18 @@
+
+
+If you want to delete for example the last 3 commits, run the following command to remove the changes from the file system (working tree) and commit history (index) on your local branch:
+git reset --hard HEAD~3
+
+Then run the following command (on your local machine) to force the remote branch to rewrite its history:
+
+git push --force
+
+You can retrieve the desired commit id by running
+
+git log
+
+Then you can replace HEAD~N with <desired-commit-id> like this:
+
+git reset --hard <desired-commit-id>
+
+If you want to keep changes on file system and just modify index (commit history), use --soft flag like git reset --soft HEAD~3. Then you have chance to check your latest changes and keep or drop all or parts of them. In the latter case runnig git status shows the files changed since <desired-commit-id>. If you use --hard option, git status will tell you that your local branch is exactly the same as the remote one. If you don't use --hard nor --soft, the default mode is used that is --mixed

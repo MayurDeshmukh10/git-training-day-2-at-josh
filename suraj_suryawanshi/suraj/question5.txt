@@ -1,0 +1,7 @@
+force overwrites a remote branch with your local branch.
+
+--force-with-lease is a safer option that will not overwrite any work on the remote branch if more commits were added to the remote branch (by another team-member or coworker or what have you). It ensures you do not overwrite someone elses work by force pushing.
+
+git push --force is destructive because it unconditionally overwrites the remote repository with whatever one have locally. git's push --force is strongly discouraged as it can destroy other commits already pushed to a shared repository. One of the most common causes of force pushes is when we're forced to rebase a branch.
+
+--force-with-lease does is refuse to update a branch unless it is the state that we expect; i.e. nobody has updated the branch upstream. In practice this works by checking that the upstream ref is what we expect, because refs are hashes, and implicitly encode the chain of parents into their value.

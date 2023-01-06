@@ -1,0 +1,18 @@
+What is cherry-pick?
+Cherry-picking in Git stands for applying some commit from one branch into another branch. In case you made a mistake and committed a change into the wrong branch, but do not want to merge the whole branch. You can revert the commit and apply it on another branch.
+
+Use Cases
+1.It is a handy tool for team collaboration.
+2.It is necessary in case of bug fixing because bugs are fixed and tested in the development branch with their commits.
+3.It is mostly used in undoing changes and restoring lost commits.
+4.You can avoid useless conflicts by using git cherry-pick instead of other options.
+
+Steps
+1.git log 
+use this command to get id of commit where we made mistake.
+2.git checkout branc_name
+switch to desired branch from current branch
+3.git cherry-pick commit_id
+this command applies changes to desired branch by restoring previous commit.
+
+
