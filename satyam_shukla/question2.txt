@@ -18,3 +18,12 @@ This will add a new remote repository called "upstream" with the URL "https://gi
 Verify that the new remote repository has been added:
 Copy code
 git remote -v
+
+
+the use of this is-
+
+1.)we use it when we want to send our file to multiple remote repositories.
+
+2.)it is also used when we do open source contribution.
+
+3.)we do that to create remote repositories while creating projects of client and doing changes in that so that the origin doesn't get disturbed and when we are sure then we send to origin.
