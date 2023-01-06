@@ -1,0 +1,5 @@
+Steps:-
+first create a remote repository and create one test file and push it to remote repository.
+then again create a remote repository and use command " git remote add github <repository name>"
+then push it to remote repository.
+now the file will also be present in second repository.

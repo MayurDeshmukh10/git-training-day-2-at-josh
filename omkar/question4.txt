@@ -1,0 +1,2 @@
+command for deleting a commit:-
+git reset --hard HEAD~1

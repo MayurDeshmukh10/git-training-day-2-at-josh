@@ -1,0 +1,3 @@
+to combine two or more commits we simply use the command "git rebase -i HEAD~n" where n=number of commits you want to combine.
+after this text document will open where we have to pick which commit we want to pick and squash the other commit
+then the commits will combine .
