@@ -1,0 +1,7 @@
+cherry pick is used when you made some changes in branch2 and committed it and you want same changes in branch1 then cherry pick command is used.
+ It is mainly used if you don’t want to merge the whole branch and you want some of the commits.
+
+ Steps:-
+ first we create a file in branch2 and add and commit it. then by git log --oneline we copy the hash value of file.
+ then we checkout to branch1 then in branch1 we use the command git cherry-pick <hash value> and paste the hash value to it.
+ then the file will get updated to branch1 also.
