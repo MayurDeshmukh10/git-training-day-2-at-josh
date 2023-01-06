@@ -1,0 +1,9 @@
+Steps to Merge 2 commits :
+ 1. head pointed to commit from where merge will happen
+    git checkout <commit-id> 
+ 2. Merge current and previous commit 
+    git rebase -i HEAD~2
+ 3. New terminal open then update 2nd commit selection from "pick" to "s"
+ 4. for leave that terminal press ESC  --> ctrl+S  --> :wq
+ 5. then press # and write commit msg 
+
