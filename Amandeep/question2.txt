@@ -1,0 +1,7 @@
+Sometimes while working on a project, the data involved can be in large amounts that
+can be around terabytes or petabytes even, henceforth the best way to scale our project 
+is to have multiple remote repositories, for differnet purposes. Now ,if we have a single
+remote available with us, then it is by default named as 'origin'. 
+But to have  more than one remote repositories we need to rename the rigin as something else
+and we do this by manually editing the git repository's configuration file where we wil add the 
+second repository as a new remote source. And thus we can add multiple remote repositories, for a single project in the local repo.

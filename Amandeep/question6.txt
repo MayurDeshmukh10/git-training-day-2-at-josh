@@ -1,0 +1,2 @@
+If we want to unstage a particular commit, from the staging area then we have a general command - 'git reset --[option] <commit_hash>'.
+Now option can be among the values - soft, hard or mixed depending on the need.

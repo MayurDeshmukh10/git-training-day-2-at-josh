@@ -1,0 +1,3 @@
+A remote branch is overwritten with your local branch using "git push --force."
+
+However, if more changes were made to the remote branch, "git push --force-with-lease" will not overwrite any of the work there. Prior to pushing the changes, it leases the remote branch. If the leased branch and the remote branch are identical, it is pushed.
