@@ -1,0 +1,12 @@
+ans :- 
+Steps to merging multiple commits
+
+1)You want to git rebase -i to perform an interactive rebase.
+
+2) If you're currently on your "commit 1", and the commit you want to merge, "commit 2", 
+is the previous commit, you can run git rebase -i HEAD~2, which will spawn an editor 
+listing all the commits the rebase will traverse. 
+
+3) You should see two lines starting with "pick".
+To proceed with squashing, change the first word of the second line from "pick" to "squash". 
+Then save your file, and quit. Git will squash your first commit into your second last commit.
